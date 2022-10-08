@@ -11,9 +11,26 @@ const { title } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/png" href="/codeflakebg.jpg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script>
+			$('a').click(function (event) {
+				let last = window.location.search
+				console.log(last)
+				event.preventDefault();
+				if(!$(this).attr("href").startsWith("https://")) {
+					window.history.pushState("", "", $(this).attr("href"));
+					$('body').load($(this).attr('href'));
+				} else {
+					window.open($(this).attr('href'));
+				}
+			});
+			window.addEventListener('popstate', function (event) {
+				location.reload()
+			});
+		</script>
 	</head>
 	<body>
 		<slot />
@@ -21,8 +38,7 @@ const { title } = Astro.props;
 </html>
 <style is:global>
 	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+		--accent-gradient: linear-gradient(45deg, #36a5bb, #21c4e4 30%, white 60%);
 	}
 	html {
 		font-family: system-ui, sans-serif;

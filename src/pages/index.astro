@@ -1,45 +1,53 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Nav from '../components/Nav.astro';
 ---
-
-<Layout title="Welcome to Astro.">
+<Layout title="Codeflake">
+	<Nav>
+		<a href="">Hello</a>
+	</Nav>
 	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
+		<h1 style="margin-bottom: 40px; text-align: center;">Codeflake</h1>
 		<ul role="list" class="link-card-grid">
 			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
+				href="/langs"
+				title="Programming Languagues"
+				body="Learn how programming languagues work and how to use them."
 			/>
 			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
+				href="/cs"
+				title="Computer Science"
+				body="Learn how a Windows 10 computer works."
 			/>
 			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
+				href="/PaaS"
+				title="PaaS"
+				body="What are PaaS and how to get started."
 			/>
 			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
+				href="/databases"
+				title="Databases"
+				body="What are databases and how to get started storaging data."
+			/>
+			<Card
+				href="/codeflake"
+				title="Learn about codeflake"
+				body="Learn where is our platform hosted, what programming languague uses, framework and our team."
 			/>
 		</ul>
 	</main>
 </Layout>
-
 <style>
+	* {
+		margin: auto;
+		padding: auto;
+		box-sizing: border-box;
+	}
 	main {
 		margin: auto;
 		padding: 1.5rem;
-		max-width: 60ch;
+		width: 80%;
 	}
 	h1 {
 		font-size: 3rem;
@@ -74,8 +82,8 @@ import Card from '../components/Card.astro';
 	}
 	.link-card-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
 		padding: 0;
 	}
 </style>
