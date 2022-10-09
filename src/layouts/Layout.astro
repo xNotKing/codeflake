@@ -37,6 +37,10 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
+	* {
+		margin: auto;
+		padding: auto;
+	}
 	:root {
 		--accent-gradient: linear-gradient(45deg, #36a5bb, #21c4e4 30%, white 60%);
 	}
@@ -47,5 +51,9 @@ const { title } = Astro.props;
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+	body {
+		width: 100%;
+		min-height: 100vh;
 	}
 </style>

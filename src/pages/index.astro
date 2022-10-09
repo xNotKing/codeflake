@@ -5,21 +5,25 @@ import Nav from '../components/Nav.astro';
 ---
 <Layout title="Codeflake">
 	<Nav>
-		<a href="">Hello</a>
+		<a href="/">Home</a>
+		<a href="/cs">CS</a>
 	</Nav>
 	<main>
 		<h1 style="margin-bottom: 40px; text-align: center;">Codeflake</h1>
 		<ul role="list" class="link-card-grid">
+			<!---
 			<Card
 				href="/langs"
 				title="Programming Languagues"
 				body="Learn how programming languagues work and how to use them."
 			/>
+			-->
 			<Card
 				href="/cs"
 				title="Computer Science"
 				body="Learn how a Windows 10 computer works."
 			/>
+			<!---
 			<Card
 				href="/PaaS"
 				title="PaaS"
@@ -32,13 +36,20 @@ import Nav from '../components/Nav.astro';
 			/>
 			<Card
 				href="/codeflake"
-				title="Learn about codeflake"
+				title="Learn about Codeflake"
 				body="Learn where is our platform hosted, what programming languague uses, framework and our team."
+			/>
+			-->
+			<Card
+				href="/discord"
+				title="Our Community"
+				body="In our community your questions will be solved about programming and you can also play games with people."
 			/>
 		</ul>
 	</main>
 </Layout>
 <style>
+	@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
 	* {
 		margin: auto;
 		padding: auto;
@@ -48,6 +59,7 @@ import Nav from '../components/Nav.astro';
 		margin: auto;
 		padding: 1.5rem;
 		width: 80%;
+		font-family: 'Fira Sans', sans-serif;
 	}
 	h1 {
 		font-size: 3rem;
@@ -86,4 +98,8 @@ import Nav from '../components/Nav.astro';
 		gap: 20px;
 		padding: 0;
 	}
+	a {
+        text-decoration: none;
+        color: #000;
+    }
 </style>
