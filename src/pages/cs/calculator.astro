@@ -1,0 +1,36 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+---
+<Layout title="Codeflake | Windows Calculator">
+    <Nav>
+		<a href="/">Home</a>
+		<a href="/cs">CS</a>
+	</Nav>
+    <main>
+        <h1>Windows calculator</h1>
+        <p>The windows calculator is wrriten in C# and C++. If you don't know what C# or C++ is yet, we can give you a basic information.</p>
+        <p>C# is an Object oriented programming languague made by Microsoft in 2000. It's used for the Windows operating system and many more desktop applications.</p>
+        <p>C++ mainly inspired by C is one of the fastest languagues in the world that has inspired most famous languagues, like PHP, C# or Java, released in 1979</p>
+        <p>
+            Then, how does the Windows calculator make these operations?<br>
+            The operations are made by the programming languague and then displayed in your screen by the graphic card, this process requires CPU.
+        </p>
+        <p>Which according to Wikipedia, the CPU is: Central Processing Unit (CPU), also called a central processor, main processor or just processor, is the electronic circuitry that executes instructions comprising a computer program. The CPU performs basic arithmetic, logic, controlling, and input/output (I/O) operations specified by the instructions in the program.</p>
+    </main>
+</Layout>
+<style>
+    main {
+        width: 80%;
+        max-width: 520px;
+        padding: 0 16px;
+    }
+    main p {
+        margin-top: 20px;
+    }
+    a {
+
+        text-decoration: none;
+        color: #000;
+    }
+</style>

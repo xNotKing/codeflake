@@ -1,0 +1,26 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+---
+<Layout title="Codeflake | CS Intro">
+    <Nav>
+		<a href="/">Home</a>
+		<a href="/cs">CS</a>
+	</Nav>
+    <main>
+        <h1>Introduction</h1>
+        <p>Welcome to the Computer Science course</p>
+        <p>In this course we'll teach you some Windows OS things, for now there are only a few courses but you can contribute adding more courses in our github: https://github.com/xNotKing/codeflake</p>
+    </main>
+</Layout>
+<style>
+    main {
+        width: 80%;
+        max-width: 720px;
+        padding: 0 16px;
+    }
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+</style>

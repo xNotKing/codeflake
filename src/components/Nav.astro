@@ -1,6 +1,11 @@
 <nav>
-    <img src="codeflakelogo.png" alt="codeflake">
-    <slot/>
+    <img src="../../public/codeflakelogo.png" alt="codeflake">
+    <div class="content">
+        <slot/>
+    </div>
+    <div class="menu" onclick="location.href = '/'">
+        <i class="fas fa-bars"></i>
+    </div>
 </nav>
 <style>
     nav {
@@ -12,5 +17,23 @@
         margin-left: 0;
         object-fit: cover;
         height: 140px;
+    }
+    nav .menu {
+        display: none;
+    }
+    @media (max-width: 450px) {
+        nav .menu {
+            display: block;
+        }
+        nav .menu .fas {
+            padding-right: 0px;
+            margin-right: 0px;
+        }
+        nav .content {
+            display: none;
+        }
+        nav img {
+            height: 100px;
+        }
     }
 </style>

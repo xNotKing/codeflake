@@ -9,16 +9,16 @@ const { title } = Astro.props;
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/png" href="/codeflakebg.jpg" />
+		<meta charset="UTF-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/png" href="../../public/codeflakebg.jpg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<script src="https://kit.fontawesome.com/e4d71b6741.js" crossorigin="anonymous" defer></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		<script>
 			$('a').click(function (event) {
-				let last = window.location.search
-				console.log(last)
 				event.preventDefault();
 				if(!$(this).attr("href").startsWith("https://")) {
 					window.history.pushState("", "", $(this).attr("href"));
@@ -55,5 +55,18 @@ const { title } = Astro.props;
 	body {
 		width: 100%;
 		min-height: 100vh;
+	}
+	nav img {
+		margin: 0;
+	}
+	nav .content {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		margin-left: 0;
+	}
+	nav .content a {
+		font-size: 20px;
+		margin-left: 10px;
 	}
 </style>

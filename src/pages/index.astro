@@ -21,7 +21,12 @@ import Nav from '../components/Nav.astro';
 			<Card
 				href="/cs"
 				title="Computer Science"
-				body="Learn how a Windows 10 computer works."
+				body="Learn how a Windows 10 computer works and more about binary."
+			/>
+			<Card
+			href="/arduino"
+			title="Arduino Discord Bot"
+			body="Arduino's developers are the owners behind Codeflake, learn about Arduino discord bot."
 			/>
 			<!---
 			<Card
@@ -58,13 +63,14 @@ import Nav from '../components/Nav.astro';
 	main {
 		margin: auto;
 		padding: 1.5rem;
-		width: 80%;
+		width: 100%;
 		font-family: 'Fira Sans', sans-serif;
 	}
 	h1 {
 		font-size: 3rem;
 		font-weight: 800;
 		margin: 0;
+		width: 100%;
 	}
 	.text-gradient {
 		background-image: var(--accent-gradient);
@@ -96,10 +102,20 @@ import Nav from '../components/Nav.astro';
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 20px;
-		padding: 0;
+		padding: 0px;
 	}
 	a {
         text-decoration: none;
         color: #000;
     }
+	@media (max-width: 600px) {
+		.link-card-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	@media (max-width: 405px) {
+		.link-card-grid {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
 </style>
