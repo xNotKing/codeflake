@@ -7,18 +7,6 @@ export interface Props {
 
 const { href, title, body } = Astro.props;
 ---
-
-<li class="link-card">
-	<a href={href}>
-		<h2>
-			{title}
-			<span>&rarr;</span>
-		</h2>
-		<p>
-			{body}
-		</p>
-	</a>
-</li>
 <style>
 	.link-card {
 		margin-top: 25px;
@@ -61,3 +49,15 @@ const { href, title, body } = Astro.props;
 		color: rgb(var(--accent));
 	}
 </style>
+
+<li class="link-card">
+	<a href={href}>
+		<h2>
+			{title}
+			<span>&rarr;</span>
+		</h2>
+		<p>
+			{body}
+		</p>
+	</a>
+</li>

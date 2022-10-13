@@ -4,6 +4,7 @@ export interface Props {
 }
 
 const { title } = Astro.props;
+import favicon from '/codeflakebg.jpg'
 ---
 
 <!DOCTYPE html>
@@ -12,25 +13,16 @@ const { title } = Astro.props;
 		<meta charset="UTF-8">
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="icon" type="image/png" href="../../public/codeflakebg.png" />
+		<link rel="icon" type="image/png" href={favicon} />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<script src="https://kit.fontawesome.com/e4d71b6741.js" crossorigin="anonymous" defer></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-		<script>
-			$('a').click(function (event) {
-				event.preventDefault();
-				if(!$(this).attr("href").startsWith("https://")) {
-					window.history.pushState("", "", $(this).attr("href"));
-					$('body').load($(this).attr('href'));
-				} else {
-					window.open($(this).attr('href'));
-				}
-			});
-			window.addEventListener('popstate', function (event) {
-				location.reload()
-			});
-		</script>
+		<meta name="title" content="Codeflake">
+		<meta name="description" content="Codeflake is a programming and chilling community that will resolve all your questions in less than 24h. Cool for new developers!">
+		<meta name="og:title" content="Codeflake">
+		<meta name="og:description" content="Codeflake is a programming and chilling community that will resolve all your questions in less than 24h. Cool for new developers!">
+		<meta name="theme-color" content="#21c4e4">
+		<meta name="keywords" content="Codeflake, codeflakes, codeflake programming, codeflake community, codeflake computer science, computer science, php, javascript, python, js, chilling discord community, c, c++, c#, windows, windows calculator, cli, discord, discord programming, astro, sites, example sites, comunidad de programación">
 	</head>
 	<body>
 		<slot />
