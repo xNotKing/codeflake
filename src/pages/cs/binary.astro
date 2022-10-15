@@ -1,0 +1,44 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import cbin from '/public/cbin.png';
+---
+<Layout title="Codeflake | Binary">
+    <Nav>
+		<a href="/">Home</a>
+		<a href="/cs">CS</a>
+	</Nav>
+    <main>
+        <h1>Binary</h1>
+        <p>Binary is a numbering system which only possible values are from 0 to 1. A single binary digit it's called "Bit", it must be 1 or 0. 8 bits make a byte which means that 1KB is 8000 bits which means that 1MB is 1000000 bits.</p>
+        <p>Developers don't write binary code, instead we use a programming languague like C++ or C which automatically compiles to binary</p>
+        <img src={cbin} alt="How does binary work?" loading="lazy">
+        <p>Everything uses binary, even languagues that are not directly compiled to binary, they end up being transpiled to binary.</p>
+        <p>Binary is executed by the CPU, some languagues like C++ create an executable file which contains all the binary code before the CPU executes it.</p>
+    </main>
+</Layout>
+<style>
+    main {
+        width: 80%;
+        max-width: 520px;
+        padding: 0 16px;
+    }
+    main p {
+        margin-top: 20px;
+    }
+    a {
+
+        text-decoration: none;
+        color: #000;
+    }
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 200px;
+    }
+    @media (max-width: 450px) {
+        img {
+            object-fit: contain;
+        }
+    }
+</style>

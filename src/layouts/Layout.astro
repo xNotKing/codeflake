@@ -5,6 +5,7 @@ export interface Props {
 
 const { title } = Astro.props;
 import favicon from '/codeflakebg.jpg'
+import Footer from '../components/Footer.astro';
 ---
 
 <!DOCTYPE html>
@@ -26,6 +27,7 @@ import favicon from '/codeflakebg.jpg'
 	</head>
 	<body>
 		<slot />
+		<Footer></Footer>
 	</body>
 </html>
 <style is:global>
@@ -45,8 +47,11 @@ import favicon from '/codeflakebg.jpg'
 			Bitstream Vera Sans Mono, Courier New, monospace;
 	}
 	body {
+		display: flex;
+		flex-direction: column;
 		width: 100%;
 		min-height: 100vh;
+		padding-bottom: 30px;
 	}
 	nav img {
 		margin: 0;

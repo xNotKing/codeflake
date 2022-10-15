@@ -1,20 +1,12 @@
 ---
 import logo from '/codeflakelogo.png';
 ---
-<nav>
-    <img src={logo} alt="codeflake" loading="lazy"/>
-    <div class="content">
-        <slot/>
-    </div>
-    <div class="menu" onclick="location.href = '/'">
-        <i class="fas fa-bars"></i>
-    </div>
-</nav>
 <style>
     nav {
         display: flex;
         flex-direction: row;
         align-items: center;
+        margin: 0;
     }
     nav img {
         margin-left: 0;
@@ -40,3 +32,12 @@ import logo from '/codeflakelogo.png';
         }
     }
 </style>
+<nav>
+    <img src={logo} alt="codeflake" loading="lazy"/>
+    <div class="content">
+        <slot/>
+    </div>
+    <div class="menu" onclick="location.href = '/'">
+        <i class="fas fa-bars"></i>
+    </div>
+</nav>
