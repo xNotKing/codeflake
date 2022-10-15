@@ -1,0 +1,71 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+---
+<Layout title="Codeflake | Python">
+    <Nav>
+		<a href="/">Home</a>
+		<a href="/cs">CS</a>
+	</Nav>
+    <main>
+        <h1>IfElse| Python</h1>
+        <p>Not so complex, If else works the same as If but if "If" is false it'll run another code. Here's the syntax</p>
+        <div class="code">
+            let age = 22<br>
+            if age == 60:<br>
+                <indent/>print("You're getting old.")<br>
+            else:<br>
+                <indent/>print("You're still young.")
+        </div>
+        <p>Code above will output you're still young as the variable age doesn't have the value of 60.</p>
+    </main>
+</Layout>
+<style>
+    main {
+        width: 80%;
+        max-width: 520px;
+        padding: 0 16px;
+    }
+    main p {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .code {
+		width: 100%;
+		padding: 8px;
+		color: #fff;
+		background-color: #3f5c6f;
+		border-radius: 7px;
+		font-family: system-ui, sans-serif;
+	}
+    .code indent {
+        margin-left: 15px;
+    }
+    table {
+        padding: 8px;
+        border-radius: 7px;
+        width: 100%;
+        border: 2px solid rgb(255, 187, 60);
+    }
+    table *{
+        padding: 3px;
+        border-right: 2px solid rgb(255, 187, 60);
+    }
+    table *:nth-child(5) {
+        border: none;
+    }
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 200px;
+    }
+    @media (max-width: 450px) {
+        img {
+            object-fit: contain;
+        }
+    }
+</style>

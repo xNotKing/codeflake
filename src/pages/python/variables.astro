@@ -1,0 +1,78 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+---
+<Layout title="Codeflake | PY: Variables">
+    <Nav>
+		<a href="/">Home</a>
+		<a href="/cs">CS</a>
+	</Nav>
+    <main>
+        <h1>Python | Variables</h1>
+        <p>Variables are like containers that contain a value. For example we'll define a variable called age which value is 22. This is the syntax: </p>
+        <div class="code">
+            age = 22
+        </div>
+        <p>The code above defines a variable which name is age and value is 22. We can also print variables with these methods: </p>
+        <div class="code">
+            age = 22<br>
+            print(age)
+        </div>
+        <p>Outputs 22.</p>
+        <p>We can also enter , to concanate the variable with a string</p>
+        <div class="code">
+            age = 22<br>
+            print("Your age is", age)
+        </div>
+        <div class="next" onclick="location.href = '/python/if'" style="background-color: wheat; padding: 10px; border-radius: 7px; width: 100%; text-align: center; margin-top: 20px;">Next lesson</div>
+    </main>
+</Layout>
+<style>
+    main {
+        width: 80%;
+        max-width: 520px;
+        padding: 0 16px;
+    }
+    main p {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .code {
+		width: 100%;
+		padding: 8px;
+		color: #fff;
+		background-color: #3f5c6f;
+		border-radius: 7px;
+		font-family: system-ui, sans-serif;
+	}
+    .code indent {
+        margin-left: 15px;
+    }
+    table {
+        padding: 8px;
+        border-radius: 7px;
+        width: 100%;
+        border: 2px solid rgb(255, 187, 60);
+    }
+    table *{
+        padding: 3px;
+        border-right: 2px solid rgb(255, 187, 60);
+    }
+    table *:nth-child(5) {
+        border: none;
+    }
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 200px;
+    }
+    @media (max-width: 450px) {
+        img {
+            object-fit: contain;
+        }
+    }
+</style>

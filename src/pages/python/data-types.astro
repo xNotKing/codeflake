@@ -1,0 +1,80 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+---
+<Layout title="Codeflake | PY: Data types">
+    <Nav>
+		<a href="/">Home</a>
+		<a href="/cs">CS</a>
+	</Nav>
+    <main>
+        <h1>Python | Data Types</h1>
+        <p>Each value in Python has a data type. For example, "Hello world" is a string and 8 is an integer. Python is an statically typed languague, this means that we don't need to define which type are we using like in TypeScript (TypeScript Syntax: let x: Int = 4). We instead write x = 4.</p>
+        <table>
+            <tr>
+                <th>Int</th>
+                <th>String</th>
+                <th>Boolean</th>
+                <th>Float</th>
+            </tr>
+            <tr>
+                <td>Whole numbers</td>
+                <td>Text inside ""</td>
+                <td>true | false</td>
+                <td>Numbers with decimal points</td>
+            </tr>
+            <tr>
+                <td>Ex: 8</td>
+                <td>Ex: "Hi"</td>
+                <td>true | false</td>
+                <td>Ex: 8.32</td>
+            </tr>
+        </table>
+    </main>
+</Layout>
+<style>
+    main {
+        width: 80%;
+        max-width: 520px;
+        padding: 0 16px;
+    }
+    main p {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    table {
+        padding: 8px;
+        border-radius: 7px;
+        width: 100%;
+        border: 2px solid rgb(255, 187, 60);
+    }
+    table *{
+        padding: 3px;
+        border-right: 2px solid rgb(255, 187, 60);
+    }
+    table *:nth-child(4) {
+        border: none;
+    }
+    code {
+		width: 100%;
+		padding: 16px;
+		color: #fff;
+		background-color: #3f5c6f;
+		border-radius: 7px;
+		font-family: system-ui, sans-serif;
+	}
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 200px;
+    }
+    @media (max-width: 450px) {
+        img {
+            object-fit: contain;
+        }
+    }
+</style>
