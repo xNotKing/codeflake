@@ -28,7 +28,12 @@ import Footer from '../components/Footer.astro';
 		<meta name="theme-color" content="#21c4e4">
 		<meta name="keywords" content="Codeflake, codeflakes, codeflake programming, codeflake community, codeflake computer science, computer science, php, javascript, python, js, chilling discord community, c, c++, c#, windows, windows calculator, cli, discord, discord programming, astro, sites, example sites, comunidad de programación, binary, binario, xnotking, paradise, xnotkingdev">
 	</head>
-	<body>
+	<body onload="setTimeout(() => {document.querySelector('.loader').style.display='none'}, 600)">
+		<div class="loader">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
 		<slot />
 		<Footer></Footer>
 	</body>
@@ -56,6 +61,61 @@ import Footer from '../components/Footer.astro';
 		min-height: 100vh;
 		padding-bottom: 30px;
 	}
+	.loader {
+		z-index: 99999;
+		background-color: #fff;
+		position: fixed;
+		top: 0px; 
+		left: 0px;
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
+	.loader div {
+		height: 15px;
+		width: 15px;
+		border-radius: 50%;
+		margin: 0 5px;
+		background-color: #517994;
+		--webkit-animation: bounce 1s infinite alternate;
+		--moz-animation: bounce 1s infinite alternate;
+		--o-animation: bounce 1s infinite alternate;
+		animation: bounce 1s infinite alternate;
+	}
+	.loader div:nth-child(2) {
+		animation-delay: 300ms;
+	}
+
+	.loader div:nth-child(3) {
+		animation-delay: 600ms;
+	}
+	@-webkit-keyframes bounce {
+		to {
+			opacity: .2;
+		}
+	}
+
+	@-moz-keyframes bounce {
+		to {
+			opacity: .2;;
+		}
+	}
+
+	@-o-keyframes bounce {
+		to {
+			opacity: .2;
+		}
+	}
+
+	@keyframes bounce {
+		to {
+			opacity: .2;
+		}
+	}
+
 	nav img {
 		margin: 0;
 	}
