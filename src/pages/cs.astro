@@ -3,33 +3,6 @@ import Layout from "../layouts/Layout.astro";
 import Nav from '../components/Nav.astro';
 import Card from '../components/Card.astro';
 ---
-<Nav>
-    <a href="/">Home</a>
-    <a href="/cs">CS</a>
-</Nav>
-<Layout title="Codeflake CS">
-    <header>
-        <h1>Computer Science</h1>
-        <p style="width: 70%; text-align: center;">Welcome to the computer science course! Learn about Windows.</p>
-    </header>  
-    <main>
-        <Card
-			href="/cs/intro"
-			title="Introduction"
-			body="Itroduction to Computer Science course."
-		/>
-        <Card
-			href="/cs/calculator"
-			title="Windows Calculator"
-			body="How does the windows calculator work?"
-		/>
-        <Card
-			href="/cs/binary"
-			title="Binary"
-			body="Learn about Binary."
-		/>
-    </main>
-</Layout>
 <style>
     * {
         margin: auto;
@@ -60,3 +33,30 @@ import Card from '../components/Card.astro';
         text-decoration: none;
     }
 </style>
+<Layout title="Codeflake | CS">
+    <Nav>
+        <a href="/">Home</a>
+        <a href="/cs">CS</a>
+    </Nav>
+    <header>
+        <h1>Computer Science</h1>
+        <p style="width: 70%; text-align: center;">Welcome to the computer science course! Learn about Windows.</p>
+    </header>  
+    <main>
+        <Card
+			href="/cs/intro"
+			title="Introduction"
+			body="Itroduction to Computer Science course."
+		/>
+        <Card
+			href="/cs/calculator"
+			title="Windows Calculator"
+			body="How does the windows calculator work?"
+		/>
+        <Card
+			href="/cs/binary"
+			title="Binary"
+			body="Learn about Binary."
+		/>
+    </main>
+</Layout>

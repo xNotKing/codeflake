@@ -3,11 +3,11 @@ import Layout from "../../layouts/Layout.astro";
 import Nav from '../../components/Nav.astro';
 import Card from '../../components/Card.astro';
 ---
-<Nav>
-    <a href="/">Home</a>
-    <a href="/cs">CS</a>
-</Nav>
 <Layout title="Codeflake | Python">
+    <Nav>
+        <a href="/">Home</a>
+        <a href="/cs">CS</a>
+    </Nav>
     <header>
         <h1>Python course</h1>
         <p style="width: 70%; text-align: center;">Welcome to the python course!</p>
@@ -34,6 +34,11 @@ import Card from '../../components/Card.astro';
 			body="Learn what variables are and how to print them."
 		/>
         <Card
+			href="/python/arrays"
+			title="Arrays"
+			body="Arrays are like variables but with multiple items inside."
+		/>
+        <Card
 			href="/python/data-types"
 			title="Data types"
 			body="Learn what data types are."
@@ -48,6 +53,16 @@ import Card from '../../components/Card.astro';
 			href="/python/ifelse"
 			title="Ifelse conditional"
 			body="If this is false do this."
+		/>
+        <Card
+			href="/python/for"
+			title="For Loop"
+			body="For loop can loop inside an array and print every item."
+		/>
+		<Card
+			href="/python/while"
+			title="While Loop"
+			body="Learn how to use a while loop."
 		/>
     </main>
 </Layout>

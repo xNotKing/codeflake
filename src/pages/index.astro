@@ -24,11 +24,24 @@ import Nav from '../components/Nav.astro';
 				title="Computer Science"
 				body="Learn how a Windows 10 computer works and more about binary."
 			/>
+			<div onclick="fetch('https://publicdb.templit.repl.co/?to=python')">
 			<Card
 				href="/python/"
 				title="Python"
 				body="Learn Python, a highly used programming languague. Released on 1991, by Guido van Rossum."
 			/>
+			Connections: <span class="pyconnections"></span>
+			<script defer>
+				fetch('https://publicdb.templit.repl.co/')
+  					.then((response) => response.json())
+  					.then((data) => document.querySelector(".pyconnections").innerHTML = data)
+				setInterval(() => {
+				fetch('https://publicdb.templit.repl.co/')
+  					.then((response) => response.json())
+  					.then((data) => document.querySelector(".pyconnections").innerHTML = data)
+				}, 5000)
+			</script>
+			</div>
 			<Card
 			href="/arduino"
 			title="Arduino Discord Bot"
