@@ -17,6 +17,7 @@ import Footer from '../components/Footer.astro';
 		<link rel="icon" type="image/png" href={favicon} />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<script src="/sw.js" is:inline></script>
 		<style is:global>
 		* {
 			margin: auto;
@@ -118,6 +119,7 @@ import Footer from '../components/Footer.astro';
 		<meta name="twitter:image" content="/codeflake.png">
 		<meta name="twitter:site" content="@xnotkingdev_">
 		<meta name="theme-color" content="#21c4e4">
+		<link rel="apple-touch-icon" href="/codeflake.png">
 		<link rel="manifest" href="/manifest.json">
 		<meta property="og:locale" content="en_US">
 	</head>
