@@ -70,10 +70,18 @@ import Nav from '../components/Nav.astro';
 				body="In our community your questions will be solved about programming and you can also play games with people."
 			/>
 		</ul>
+		<h1 style="margin-bottom: 40px; text-align: center;">Code challenges</h1>
+		<p>Complete code challenges to improve your skill, also share them.</p>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="challenge/calculator-html-css"
+				title="Calculator with HTML and CSS."
+				body="Create a calculator with HTML and CSS."
+			/>
+		</ul>
 	</main>
 </Layout>
 <style>
-	@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
 	* {
 		margin: auto;
 		padding: auto;
@@ -83,7 +91,7 @@ import Nav from '../components/Nav.astro';
 		margin: auto;
 		padding: 1.5rem;
 		width: 100%;
-		font-family: 'Fira Sans', sans-serif;
+		font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	}
 	h1 {
 		font-size: 3rem;
@@ -97,25 +105,6 @@ import Nav from '../components/Nav.astro';
 		-webkit-text-fill-color: transparent;
 		background-size: 400%;
 		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
 	}
 	.link-card-grid {
 		display: grid;

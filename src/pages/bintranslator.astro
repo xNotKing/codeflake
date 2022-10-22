@@ -1,0 +1,96 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+---
+<Layout title="Codeflake">
+	<Nav>
+		<a href="/">Home</a>
+		<a href="/cs">CS</a>
+	</Nav>
+	<main>
+		<h1 style="margin-bottom: 40px; text-align: center;">Codeflake</h1>
+		<p>Translate binary in our site, Codeflake.</p>
+        <div class="form">
+            <textarea class="text"></textarea>
+            <input type="submit" value="Submit">
+        </div>
+        <span class="transpiled"></span>
+		<script defer>
+            document.querySelector(".text").addEventListener("keyup", () => {
+                fetchbinary()
+            })
+            const fetchbinary = () => {
+                let input = document.querySelector(".text").value
+                fetch(`https://binarytranslate.templit.repl.co/api?text=${input}&format=on`)
+                .then((response) => response.text())
+                .then((data) => document.querySelector(".transpiled").innerHTML = data)
+            }
+		</script>
+	</main>
+</Layout>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+	* {
+		margin: auto;
+		padding: auto;
+		box-sizing: border-box;
+	}
+	main {
+		margin: auto;
+		padding: 1.5rem;
+		width: 100%;
+		font-family: 'Fira Sans', sans-serif;
+	}
+	h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		margin: 0;
+		width: 100%;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		line-height: 1.6;
+		margin: 1rem 0;
+		border: 1px solid rgba(var(--accent), 25%);
+		background-color: white;
+		padding: 1rem;
+		border-radius: 0.4rem;
+	}
+	.instructions code {
+		font-size: 0.875em;
+		font-weight: bold;
+		background: rgba(var(--accent), 12%);
+		color: rgb(var(--accent));
+		border-radius: 4px;
+		padding: 0.3em 0.45em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+		padding: 0px;
+	}
+	a {
+        text-decoration: none;
+        color: #000;
+    }
+	@media (max-width: 600px) {
+		.link-card-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	@media (max-width: 500px) {
+		.link-card-grid {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+</style>
